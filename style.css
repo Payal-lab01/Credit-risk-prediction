@@ -1,0 +1,119 @@
+/* ================= GLOBAL STYLES ================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: #0f172a; /* dark blue */
+  color: #e5e7eb;            /* light text */
+  line-height: 1.7;
+}
+
+/* ================= LINKS & BUTTONS ================= */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.hero-buttons a {
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.hero-buttons a:first-child {
+  background: #3b82f6;
+  color: white;
+}
+
+.hero-buttons a:first-child:hover {
+  background: #2563eb;
+}
+
+.hero-buttons a:last-child {
+  border: 2px solid #3b82f6;
+  color: #3b82f6;
+}
+
+.hero-buttons a:last-child:hover {
+  background: #3b82f6;
+  color: white;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+  min-height: 100vh;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3.2rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  max-width: 700px;
+  font-size: 1.1rem;
+  color: #cbd5f5;
+  margin-bottom: 32px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+/* ================= SECTIONS ================= */
+
+section {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 30px;
+  background: #020617;
+  border-radius: 14px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+}
+
+section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  border-left: 4px solid #3b82f6;
+  padding-left: 14px;
+}
+
+/* ================= LISTS ================= */
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  padding: 12px 0;
+  border-bottom: 1px solid #1e293b;
+}
+
+ul li:last-child {
+  border-bottom: none;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
