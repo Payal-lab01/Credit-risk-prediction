@@ -193,3 +193,7 @@ h2, h3 {
   line-height: 1.6;
 }
 
+canvas {
+  height: 260px !important;
+}
+
