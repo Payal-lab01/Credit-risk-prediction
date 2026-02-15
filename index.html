@@ -97,16 +97,32 @@ financial structures and policy environments.
   </section>
 
   <!-- ================= EVALUATION ================= -->
-  <section class="evaluation" id="results">
-    <h2>Evaluation Metrics</h2>
+ <section class="evaluation-panel">
+  <h2>Evaluation Metrics</h2>
 
-    <ul>
-      <li>ROC-AUC Score</li>
-      <li>KS Statistic</li>
-      <li>Recall (Default Class)</li>
-      <li>Precision (Default Class)</li>
-    </ul>
-  </section>
+  <div class="metrics-grid">
+    <div class="metric-card">
+      <span>ROC-AUC</span>
+      <h3 id="rocValue">0.00</h3>
+    </div>
+
+    <div class="metric-card">
+      <span>KS Statistic</span>
+      <h3 id="ksValue">0.00</h3>
+    </div>
+
+    <div class="metric-card">
+      <span>Recall</span>
+      <h3 id="recallValue">0.00</h3>
+    </div>
+
+    <div class="metric-card">
+      <span>Precision</span>
+      <h3 id="precisionValue">0.00</h3>
+    </div>
+  </div>
+</section>
+
   <canvas id="rocChart" width="400" height="200"></canvas>
 
 
