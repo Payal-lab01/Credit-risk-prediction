@@ -20,9 +20,10 @@
     </p>
 
     <div class="hero-buttons">
-      <a href="https://github.com/YOUR_USERNAME/credit-risk-prediction" target="_blank">
-        View GitHub Repository
-      </a>
+      <a href="https://github.com/Payal-lab01/Credit-risk-prediction" target="_blank">
+  View GitHub Repository
+</a>
+
       <a href="#results">
         View Results
       </a>
@@ -33,10 +34,14 @@
   <section class="about">
     <h2>Project Overview</h2>
     <p>
-      This project focuses on building and evaluating machine learning models
-      to predict credit default risk. The system compares traditional
-      statistical models with ensemble learning approaches and studies
-      how credit behavior differs across economic contexts.
+     
+This project simulates a real-world credit risk evaluation system used
+by financial institutions to assess borrower default probability.
+By comparing linear and ensemble models across different economies,
+the system highlights how credit behavior is shaped by regional
+financial structures and policy environments.
+
+
     </p>
   </section>
 
@@ -55,15 +60,37 @@
       </li>
     </ul>
   </section>
+  <label for="dataset-select"><strong>Select Dataset:</strong></label>
+<select id="dataset-select">
+  <option value="india">Indian Credit Data</option>
+  <option value="us">US LendingClub Data</option>
+</select>
+
+<p id="dataset-description"></p>
+
 
   <!-- ================= MODELS ================= -->
   <section class="models">
     <h2>Models Implemented</h2>
 
-    <ul>
-      <li>Logistic Regression (with threshold calibration)</li>
-      <li>Random Forest Classifier</li>
-    </ul>
+    <div class="grid">
+  <div class="card">
+    <h3>Logistic Regression</h3>
+    <p>
+      Interpretable baseline model used for stable and regulated
+      credit decision environments.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>Random Forest</h3>
+    <p>
+      Ensemble model capturing non-linear borrower behavior and
+      complex risk patterns.
+    </p>
+  </div>
+</div>
+
   </section>
 
   <!-- ================= EVALUATION ================= -->
@@ -77,6 +104,8 @@
       <li>Precision (Default Class)</li>
     </ul>
   </section>
+  <canvas id="rocChart" width="400" height="200"></canvas>
+
 
   <!-- ================= INSIGHTS ================= -->
   <section class="insights">
@@ -116,6 +145,8 @@
       | Credit Risk Prediction Project
     </p>
   </footer>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
