@@ -46,27 +46,30 @@ financial structures and policy environments.
   </section>
 
   <!-- ================= DATASETS ================= -->
-  <section class="datasets">
-    <h2>Datasets Used</h2>
+  <section class="dashboard">
+  <h2>Model Performance Dashboard</h2>
 
-    <ul>
-      <li>
-        <strong>Indian Credit Dataset:</strong>
-        Bureau-style anonymized data representing borrower repayment behavior.
-      </li>
-      <li>
-        <strong>US LendingClub Dataset:</strong>
-        Public peer-to-peer lending data with loan and borrower attributes.
-      </li>
-    </ul>
-  </section>
-  <label for="dataset-select"><strong>Select Dataset:</strong></label>
-<select id="dataset-select">
-  <option value="india">Indian Credit Data</option>
-  <option value="us">US LendingClub Data</option>
-</select>
+  <div class="dashboard-grid">
+    
+    <!-- LEFT: Controls -->
+    <div class="dashboard-card">
+      <label for="dataset-select"><strong>Select Dataset</strong></label>
+      <select id="dataset-select">
+        <option value="india">Indian Credit Data</option>
+        <option value="us">US LendingClub Data</option>
+      </select>
 
-<p id="dataset-description"></p>
+      <p id="dataset-description"></p>
+    </div>
+
+    <!-- RIGHT: Chart -->
+    <div class="dashboard-card">
+      <h3>ROC-AUC Comparison</h3>
+      <canvas id="rocChart"></canvas>
+    </div>
+
+  </div>
+</section>
 
 
   <!-- ================= MODELS ================= -->
