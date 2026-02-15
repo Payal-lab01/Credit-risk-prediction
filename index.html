@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Credit Risk Prediction Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Credit Risk Prediction</title>
 
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -13,17 +13,36 @@
   <header class="hero">
     <h1>Credit Risk Prediction</h1>
     <p>
-      Interactive machine learning dashboard for comparing credit risk
-      models across different economic environments.
+      Interactive machine learning dashboard for analyzing and comparing
+      credit risk models across different economic environments.
     </p>
 
     <div class="hero-buttons">
       <a href="https://github.com/Payal-lab01/credit-risk-prediction" target="_blank">
         View GitHub
       </a>
-      <a href="#dashboard">View Dashboard</a>
+      <a href="#dashboard">
+        View Dashboard
+      </a>
     </div>
   </header>
+
+  <!-- ================= PROJECT OVERVIEW ================= -->
+  <section>
+    <h2>Project Overview</h2>
+    <p>
+      Credit risk prediction is a fundamental problem in the financial sector,
+      where lenders must assess the likelihood that a borrower will default
+      on a loan. Accurate credit risk assessment is essential to minimize
+      financial losses while ensuring fair access to credit.
+    </p>
+    <p>
+      This project develops a machine learning–based credit risk prediction
+      system using structured financial data. The goal is to compare traditional
+      statistical models with ensemble learning techniques and analyze how
+      credit behavior varies across different economic contexts.
+    </p>
+  </section>
 
   <!-- ================= DASHBOARD ================= -->
   <section class="dashboard" id="dashboard">
@@ -31,7 +50,7 @@
 
     <div class="dashboard-grid">
 
-      <!-- Controls -->
+      <!-- Dataset Selection -->
       <div class="dashboard-card">
         <label for="dataset-select"><strong>Select Dataset</strong></label>
         <select id="dataset-select">
@@ -40,9 +59,15 @@
         </select>
 
         <p id="dataset-description"></p>
+
+        <p class="subtext">
+          Two datasets are used in this study: an Indian bureau-style credit
+          dataset representing traditional lending systems, and a US
+          peer-to-peer lending dataset reflecting market-driven credit behavior.
+        </p>
       </div>
 
-      <!-- Chart -->
+      <!-- ROC-AUC Chart -->
       <div class="dashboard-card">
         <h3>ROC-AUC Comparison</h3>
         <div class="chart-container">
@@ -53,9 +78,39 @@
     </div>
   </section>
 
+  <!-- ================= MODELS ================= -->
+  <section>
+    <h2>Models Used</h2>
+    <p>
+      Two machine learning models were implemented to capture different
+      characteristics of credit risk.
+    </p>
+
+    <ul>
+      <li>
+        <strong>Logistic Regression:</strong>
+        A linear and interpretable baseline model widely used in regulated
+        financial environments due to its transparency and stability.
+      </li>
+      <li>
+        <strong>Random Forest:</strong>
+        An ensemble learning model capable of capturing non-linear
+        relationships and complex borrower behavior present in real-world
+        credit data.
+      </li>
+    </ul>
+  </section>
+
   <!-- ================= EVALUATION METRICS ================= -->
   <section class="evaluation-panel">
     <h2>Evaluation Metrics</h2>
+
+    <p>
+      Model performance is evaluated using multiple metrics to capture
+      different aspects of credit risk prediction. ROC-AUC measures ranking
+      ability, KS statistic evaluates separation power, while recall and
+      precision focus on default detection accuracy.
+    </p>
 
     <div class="metrics-grid">
       <div class="metric-card">
@@ -80,14 +135,53 @@
     </div>
   </section>
 
+  <!-- ================= RESULT INTERPRETATION ================= -->
+  <section>
+    <h2>Result Interpretation</h2>
+    <p>
+      Experimental results show that Indian credit data exhibits stronger
+      linear separability, making Logistic Regression a competitive and stable
+      choice. In contrast, US credit data demonstrates higher complexity and
+      policy sensitivity, where ensemble models such as Random Forest achieve
+      superior performance.
+    </p>
+    <p>
+      These findings indicate that model effectiveness depends not only on
+      algorithm selection but also on the underlying economic and financial
+      structure of the data.
+    </p>
+  </section>
+
+  <!-- ================= LIMITATIONS & FUTURE WORK ================= -->
+  <section>
+    <h2>Limitations and Future Work</h2>
+    <ul>
+      <li>
+        Models are trained on historical data and may require recalibration
+        under changing economic conditions.
+      </li>
+      <li>
+        Explainability techniques such as SHAP and LIME can be integrated to
+        improve model transparency and trust.
+      </li>
+      <li>
+        An end-to-end loan decision system can be developed by combining
+        prediction models with business rules.
+      </li>
+    </ul>
+  </section>
+
   <!-- ================= FOOTER ================= -->
   <footer>
     <p>
-      Developed by <strong>Payal Yadav</strong> | Credit Risk Prediction Project
+      Developed by <strong>Payal Yadav</strong> |
+      Credit Risk Prediction Project
     </p>
   </footer>
 
+  <!-- ================= SCRIPTS ================= -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="script.js"></script>
+
 </body>
 </html>
