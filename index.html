@@ -2,170 +2,92 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Credit Risk Prediction | ML Project</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Credit Risk Prediction Dashboard</title>
 
-  <!-- CSS will be added later -->
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-  <!-- ================= HERO SECTION ================= -->
+  <!-- ================= HERO ================= -->
   <header class="hero">
     <h1>Credit Risk Prediction</h1>
     <p>
-      A machine learning–based system for predicting loan default risk  
-      using structured financial data and explainable AI.
+      Interactive machine learning dashboard for comparing credit risk
+      models across different economic environments.
     </p>
 
     <div class="hero-buttons">
-      <a href="https://github.com/Payal-lab01/Credit-risk-prediction" target="_blank">
-  View GitHub Repository
-</a>
-
-      <a href="#results">
-        View Results
+      <a href="https://github.com/Payal-lab01/credit-risk-prediction" target="_blank">
+        View GitHub
       </a>
+      <a href="#dashboard">View Dashboard</a>
     </div>
   </header>
 
-  <!-- ================= ABOUT ================= -->
-  <section class="about">
-    <h2>Project Overview</h2>
-    <p>
-     
-This project simulates a real-world credit risk evaluation system used
-by financial institutions to assess borrower default probability.
-By comparing linear and ensemble models across different economies,
-the system highlights how credit behavior is shaped by regional
-financial structures and policy environments.
+  <!-- ================= DASHBOARD ================= -->
+  <section class="dashboard" id="dashboard">
+    <h2>Model Performance Dashboard</h2>
 
+    <div class="dashboard-grid">
 
-    </p>
+      <!-- Controls -->
+      <div class="dashboard-card">
+        <label for="dataset-select"><strong>Select Dataset</strong></label>
+        <select id="dataset-select">
+          <option value="india">Indian Credit Data</option>
+          <option value="us">US LendingClub Data</option>
+        </select>
+
+        <p id="dataset-description"></p>
+      </div>
+
+      <!-- Chart -->
+      <div class="dashboard-card">
+        <h3>ROC-AUC Comparison</h3>
+        <div class="chart-container">
+          <canvas id="rocChart"></canvas>
+        </div>
+      </div>
+
+    </div>
   </section>
 
-  <!-- ================= DATASETS ================= -->
-  <section class="dashboard">
-  <h2>Model Performance Dashboard</h2>
+  <!-- ================= EVALUATION METRICS ================= -->
+  <section class="evaluation-panel">
+    <h2>Evaluation Metrics</h2>
 
-  <div class="dashboard-grid">
-    
-    <!-- LEFT: Controls -->
-    <div class="dashboard-card">
-      <label for="dataset-select"><strong>Select Dataset</strong></label>
-      <select id="dataset-select">
-        <option value="india">Indian Credit Data</option>
-        <option value="us">US LendingClub Data</option>
-      </select>
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <span>ROC-AUC</span>
+        <h3 id="rocValue">0.00</h3>
+      </div>
 
-      <p id="dataset-description"></p>
+      <div class="metric-card">
+        <span>KS Statistic</span>
+        <h3 id="ksValue">0.00</h3>
+      </div>
+
+      <div class="metric-card">
+        <span>Recall</span>
+        <h3 id="recallValue">0.00</h3>
+      </div>
+
+      <div class="metric-card">
+        <span>Precision</span>
+        <h3 id="precisionValue">0.00</h3>
+      </div>
     </div>
-
-    <!-- RIGHT: Chart -->
-    <div class="dashboard-card">
-      <h3>ROC-AUC Comparison</h3>
-      <canvas id="rocChart"></canvas>
-    </div>
-
-  </div>
-</section>
-
-
-  <!-- ================= MODELS ================= -->
-  <section class="models">
-    <h2>Models Implemented</h2>
-
-    <div class="grid">
-  <div class="card">
-    <h3>Logistic Regression</h3>
-    <p>
-      Interpretable baseline model used for stable and regulated
-      credit decision environments.
-    </p>
-  </div>
-
-  <div class="card">
-    <h3>Random Forest</h3>
-    <p>
-      Ensemble model capturing non-linear borrower behavior and
-      complex risk patterns.
-    </p>
-  </div>
-</div>
-
-  </section>
-
-  <!-- ================= EVALUATION ================= -->
- <section class="evaluation-panel">
-  <h2>Evaluation Metrics</h2>
-
-  <div class="metrics-grid">
-    <div class="metric-card">
-      <span>ROC-AUC</span>
-      <h3 id="rocValue">0.00</h3>
-    </div>
-
-    <div class="metric-card">
-      <span>KS Statistic</span>
-      <h3 id="ksValue">0.00</h3>
-    </div>
-
-    <div class="metric-card">
-      <span>Recall</span>
-      <h3 id="recallValue">0.00</h3>
-    </div>
-
-    <div class="metric-card">
-      <span>Precision</span>
-      <h3 id="precisionValue">0.00</h3>
-    </div>
-  </div>
-</section>
-
-  <canvas id="rocChart" width="400" height="200"></canvas>
-
-
-  <!-- ================= INSIGHTS ================= -->
-  <section class="insights">
-    <h2>Key Insights</h2>
-
-    <ul>
-      <li>
-        Indian credit data shows strong linear separability,
-        making Logistic Regression highly effective.
-      </li>
-      <li>
-        US credit data exhibits non-linear patterns and policy sensitivity,
-        benefiting from ensemble models.
-      </li>
-      <li>
-        Model performance is influenced more by economic context
-        than algorithm choice alone.
-      </li>
-    </ul>
-  </section>
-
-  <!-- ================= FUTURE WORK ================= -->
-  <section class="future">
-    <h2>Future Enhancements</h2>
-
-    <ul>
-      <li>SHAP and LIME for model explainability</li>
-      <li>NLP-based borrower text analysis</li>
-      <li>End-to-end automated loan decision system</li>
-    </ul>
   </section>
 
   <!-- ================= FOOTER ================= -->
   <footer>
     <p>
-      Developed by <strong>Payal Yadav</strong>  
-      | Credit Risk Prediction Project
+      Developed by <strong>Payal Yadav</strong> | Credit Risk Prediction Project
     </p>
   </footer>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="script.js"></script>
 
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
