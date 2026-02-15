@@ -79,20 +79,22 @@ a {
 /* ================= SECTIONS ================= */
 
 section {
-  max-width: 1000px;
-  margin: 60px auto;
-  padding: 30px;
-  background: #020617;
-  border-radius: 14px;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+  max-width: 1100px;
+  margin: 70px auto;
+  padding: 40px;
+  background: rgba(2, 6, 23, 0.7);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-section h2 {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-  border-left: 4px solid #3b82f6;
-  padding-left: 14px;
+section:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
 }
+
 
 /* ================= LISTS ================= */
 
@@ -116,4 +118,34 @@ footer {
   padding: 40px 20px;
   color: #94a3b8;
   font-size: 0.9rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  padding: 24px;
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: 14px;
+  border: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+h2, h3 {
+  letter-spacing: 0.4px;
+}
+
+.card:hover {
+  border-color: #3b82f6;
+}
+
+#dataset-select {
+  margin-top: 10px;
+  padding: 10px 14px;
+  background: #020617;
+  color: #e5e7eb;
+  border: 1px solid #334155;
+  border-radius: 8px;
 }
