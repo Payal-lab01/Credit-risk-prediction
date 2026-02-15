@@ -37,35 +37,50 @@ let rocChart = new Chart(ctx, {
       {
         label: "ROC-AUC Score",
         data: datasetInfo.india.roc,
-        backgroundColor: ["#3b82f6", "#22c55e"]
+        backgroundColor: ["#60a5fa", "#4ade80"],
+borderRadius: 12,
+barThickness: 60
+
       }
     ]
   },
-  options: {
-    responsive: true,
-    plugins: {
-      legend: {
-        labels: {
-          color: "#e5e7eb"
-        }
+options: {
+  responsive: true,
+  maintainAspectRatio: false,
+  plugins: {
+    legend: {
+      display: false
+    },
+    tooltip: {
+      backgroundColor: "#020617",
+      titleColor: "#e5e7eb",
+      bodyColor: "#e5e7eb",
+      borderColor: "#3b82f6",
+      borderWidth: 1
+    }
+  },
+  scales: {
+    y: {
+      beginAtZero: true,
+      max: 1,
+      grid: {
+        color: "rgba(148,163,184,0.15)"
+      },
+      ticks: {
+        color: "#e5e7eb"
       }
     },
-    scales: {
-      y: {
-        beginAtZero: true,
-        max: 1,
-        ticks: {
-          color: "#e5e7eb"
-        }
+    x: {
+      grid: {
+        display: false
       },
-      x: {
-        ticks: {
-          color: "#e5e7eb"
-        }
+      ticks: {
+        color: "#e5e7eb"
       }
     }
   }
-});
+}
+);
 
 function updateChart(dataset) {
   rocChart.data.datasets[0].data = datasetInfo[dataset].roc;
