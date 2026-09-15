@@ -446,7 +446,3 @@ Manipal University Jaipur
 
 This project is intended for academic and research purposes.
 
-```
-
-**This is the version I'd use.** It reads like an actual academic/technical project repository rather than a promotional README, and it also accurately reflects what you've actually built instead of claiming SHAP/LIME or other features as future work.
-```
